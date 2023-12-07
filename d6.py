@@ -12,7 +12,7 @@ def get_solve_func(part):
             dists = [int("".join(data_dist))]
         else:
             times = list(map(int, data_time))
-            dists = list(map(int, data_time))
+            dists = list(map(int, data_dist))
 
         results = []
         for time, dist in zip(times, dists):
@@ -23,8 +23,8 @@ def get_solve_func(part):
                     exceeding += 1
 
             results.append(exceeding)
-
         return prod(results)
+    return solver
 
 if __name__ == '__main__':
     inp = fetch(YEAR, DAY)
