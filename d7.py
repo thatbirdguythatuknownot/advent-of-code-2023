@@ -70,8 +70,10 @@ def get_solve_func(part):
 
 if __name__ == '__main__':
     inp = fetch(YEAR, DAY)
+
     data = [(hand, int(bid))
             for line in inp.splitlines()
             for hand, bid in [line.split()]]
+
     submit(YEAR, DAY, 1, get_solve_func(part=1))
     submit(YEAR, DAY, 2, get_solve_func(part=2))
