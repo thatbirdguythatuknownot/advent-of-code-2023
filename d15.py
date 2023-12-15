@@ -26,6 +26,7 @@ def part_2():
                 # optional second argument won't error.
                 boxes[hash_(label)].pop(label, None)
             case label, focal_len_str:
+                # `<label>=<focal length>` case
                 boxes[hash_(label)][label] = int(focal_len_str)
 
     focus_power = 0
